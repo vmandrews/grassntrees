@@ -1,0 +1,17 @@
+.idea/**/workspace.xml
+.idea/**/tasks.xml
+.idea/dictionaries
+.idea/preferred-vcs.xml
+.idea/markdown-exported-files.xml
+
+/out/
+
+.idea/inspectionProfiles/
+<<<<<<< Updated upstream
+.idea/uiDesigner.xml
+=======
+<<<<<<< Updated upstream
+=======
+.idea/uiDesigner.xml
+>>>>>>> Stashed changes
+>>>>>>> Stashed changes
