@@ -2,9 +2,10 @@ import bos.GameBoard;
 
 import java.awt.*;
 import java.util.Optional;
+import java.util.Random;
 
 public class Grid implements GameBoard<Cell> {
-
+	
     private Cell[][] cells  = new Cell[20][20];
 
     private int x;
@@ -16,7 +17,17 @@ public class Grid implements GameBoard<Cell> {
 
         for(int i = 0; i < 20; i++) {
             for(int j = 0; j < 20; j++) {
-                cells[i][j] = new Cell(x + j * 35, y + i * 35);
+                Random rand = new Random();
+                Cell cell = null;
+                // Randomly assign a surface color
+                int surfaceNum = rand.nextInt(3);
+                switch(surfaceNum) {
+                	case 0: cell = new DirtCell(x + j * 35, y + i * 35); break;
+                	case 1: cell = new GrassCell(x + j * 35, y + i * 35); break;
+                	case 2: cell = new TreeCell(x + j * 35, y + i * 35); break;
+                	case 3: cell = new RockCell(x + j * 35, y + i * 35); break;
+                }
+                cells[i][j] = cell;
             }
         }
     }
